@@ -1,0 +1,42 @@
+import java.util.*;
+public class Search
+{
+    public static void main(String[]args)
+    {
+        int a[]=new int[6];
+        int i,j,t=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter array: ");
+        for(i=0;i<6;++i)
+        {
+            a[i]=sc.nextInt();
+        }
+        System.out.println("Array elements are: ");
+        for(i=0;i<6;++i)
+        {
+            System.out.print(+a[i]+" ");
+        }
+        System.out.println();
+        for(i=0;i<6;++i)
+        {
+            for(j=i+1;j<6;++j)
+            {
+                if(a[i]>a[j])
+                {
+                   t=a[i];
+                   a[i]=a[j];
+                   a[j]=t; 
+
+
+                }
+
+            }
+        }
+        System.out.println("Array after sorting:");
+        for(i=0;i<6;++i)
+        {
+            System.out.print(+a[i]+" ");
+        }
+    }
+
+}
